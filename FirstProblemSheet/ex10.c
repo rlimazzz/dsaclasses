@@ -2,40 +2,52 @@
 #include <math.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
+    int t;
+    double pi = 3.14159265;
+    scanf(" %d", &t);
+    getchar();
 
-    while(n--) {
-        char figura;
-        double a, b, c, op;
-        scanf("%c", &figura);
+    while(t--) {
+        char entr;
+        scanf(" %c", &entr);
+        getchar();
 
-        if(figura == 'C') {
-            scanf("%lf", &a);
 
-            op = 3.14159265 * (a * a);
-            printf("%d\n", round(op));
-        } 
-        else if(figura == 'E') {
-            scanf("%lf %lf", &a, &b);
+        if(entr == 'C') {
+            double n1, resultado;
+            scanf("%lf", &n1);
 
-            op = 3.14159265 * (a * b);
-            printf("%d\n", round(op));
-        }    
-        else if(figura == 'T') {
-            scanf("%lf %lf %lf", &a, &b, &c);
+            resultado = (n1 * n1) * pi;
 
-            double semip = a + b + c;
-            op = sqrt(semip * (semip - a) * (semip- b) * (semip - c));
+            printf("%.0lf\n", resultado);
 
-            printf("%d\n", round(op));
         }
-        else if(figura == 'Z') {
-            scanf("%lf %lf %lf", &a, &b, &c);
+        else if(entr == 'E'){
+            double n1, n2, resultado;
+            scanf("%lf %lf", &n1, &n2);
 
-            op = ((a + b) * c ) / 2;
-            printf("%d\n", round(op));
+            resultado = (n1 * n2) * pi;
+
+            printf("%.0lf\n",resultado);
+        }
+        else if(entr == 'T') {
+            double n1, n2, n3, resultado, semiperimetro;
+            scanf("%lf %lf %lf", &n1, &n2, &n3);
+
+            semiperimetro = (n1 + n2 + n3) / 2;
+            resultado = sqrt(semiperimetro * (semiperimetro - n1) * (semiperimetro - n2) * (semiperimetro - n3));
+
+            printf("%0.lf\n", resultado);
+        }
+        else if(entr == 'Z') {
+            double n1, n2 , n3, resultado;
+            scanf("%lf %lf %lf", &n1, &n2, &n3);
+
+            resultado = ((n1 + n2) * n3) / 2;
+
+            printf("%0.lf\n", resultado);
         }
     }
+
     return 0;
 }

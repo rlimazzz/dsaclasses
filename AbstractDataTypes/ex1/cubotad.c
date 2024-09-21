@@ -1,4 +1,5 @@
-typedef struct cubo Cubo;
+#include <stdlib.h>
+#include "cubo.h"
 
 struct cubo {
     double lado;

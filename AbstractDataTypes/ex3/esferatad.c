@@ -1,4 +1,4 @@
-typedef struct esfera Esfera;
+#include "esfera.h"
 
 struct esfera {
     double raio;

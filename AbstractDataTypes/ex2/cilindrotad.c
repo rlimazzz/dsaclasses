@@ -1,4 +1,6 @@
-typedef struct cilindro Cilindro;
+#include <stdlib.h>
+#include <stdio.h>
+#include "cilindro.h"
 
 struct cilindro{
     double raio;

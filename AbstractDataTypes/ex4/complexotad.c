@@ -1,4 +1,4 @@
-typedef struct complexo Complexo;
+#include "complexo.h"
 
 struct complexo {
     double real;
